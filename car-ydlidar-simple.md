@@ -12,7 +12,7 @@ PC Linux 版本：Ubuntu22.04，ROS2 Humble
 ### 启动底盘
 
 ```bash
-ros2 launch jdbot_base_bringup start_control_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.270 wheel_diameter:=0.065 min_angular_speed:=0.4
+ros2 launch jdbot_base_bringup start_control_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.270 wheel_diameter:=0.065 min_angular_speed:=0.1 min_linear_speed:=0.01 use_cpp:=true
 ```
 
 ### 启动雷达
@@ -54,7 +54,7 @@ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select jdbot_nav
 ### 启动底盘
 
 ```bash
-ros2 launch jdbot_base_bringup start_control_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.270 wheel_diameter:=0.065 min_angular_speed:=0.4
+ros2 launch jdbot_base_bringup start_control_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.270 wheel_diameter:=0.065 min_angular_speed:=0.1 min_linear_speed:=0.01 use_cpp:=true
 ```
 
 ### 启动雷达
@@ -81,4 +81,28 @@ ros2 launch jdbot_navigation lidar_nav2.launch.py
 
 ```bash
 ros2 launch visualization display_slam.launch.py
+```
+
+## 跟随
+
+### 启动底盘
+
+```bash
+ros2 launch jdbot_base_bringup start_control_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.270 wheel_diameter:=0.065 min_angular_speed:=0.1 min_linear_speed:=0.01 use_cpp:=true
+```
+
+### 启动相机
+
+```bash
+ros2 run usb_cam usb_cam_node_exe --ros-args -p video_device:="/dev/video20"
+```
+
+### 启动跟随
+
+```bash
+ros2 launch jobot_mono_follow agv_person_follow.launch.py
+```
+
+```bash
+ros2 service call /toggle_follow std_srvs/srv/SetBool "{data: true}"
 ```

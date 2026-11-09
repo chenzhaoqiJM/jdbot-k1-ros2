@@ -11,6 +11,14 @@ libglew-dev libepoxy-dev libjpeg-dev libpng-dev libtiff-dev wget \
 libeigen3-dev
 ```
 
+```bash
+sudo apt install spacemit-onnxruntime python3-spacemit-ort
+```
+
+```bash
+printf 'SUBSYSTEM=="misc", KERNEL=="tcm", GROUP="%s", MODE="0660"\n' "$(id -gn)" | sudo tee /etc/udev/rules.d/99-jobot-tcm.rules >/dev/null && sudo udevadm control --reload-rules && sudo udevadm trigger --action=change --subsystem-match=misc --sysname-match=tcm
+```
+
 ## 安装 YDLIDAR SDK
 
 ```bash
