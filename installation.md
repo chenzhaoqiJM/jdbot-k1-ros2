@@ -22,8 +22,14 @@ cmake --build . -- -j8
 sudo cmake --install .
 ```
 
-
 ## 编译说明
+
+下载
+
+```bash
+mkdir ~/jdbot_ws && cd ~/jdbot_ws
+git clone https://github.com/chenzhaoqiJM/jdbot-k1-ros2.git
+```
 
 编译
 
@@ -31,4 +37,12 @@ sudo cmake --install .
 source /opt/ros/humble/setup.bash
 cd ~/jdbot_ws
 colcon build --cmake-clean-cache --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+## 组
+
+```bash
+sudo usermod -aG video $USER
+sudo usermod -aG audio $USER
+sudo usermod -aG dialout $USER
 ```
