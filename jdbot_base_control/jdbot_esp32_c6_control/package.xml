@@ -3,12 +3,20 @@
 <package format="3">
   <name>jdbot_esp32_c6_control</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>ESP32-C6 serial chassis control and wheel odometry.</description>
   <maintainer email="zhaoqi.chen@spacemit.com">zqc</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>tf2_ros</depend>
+
+  <test_depend>ament_cmake_pytest</test_depend>
+  <test_depend>rclpy</test_depend>
+  <test_depend>tf2_msgs</test_depend>
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 

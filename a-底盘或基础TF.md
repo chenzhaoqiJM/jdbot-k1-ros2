@@ -1,5 +1,7 @@
 # 底盘
 
+ESP32-C6 的三个启动文件（`start_control_esp32_c6.launch.py`、`start_control_linglong_esp32_c6.launch.py`、`start_control_linksee_esp32_c6.launch.py`）均支持 `use_cpp` 参数：默认 `false` 使用原 Python 节点，设为 `true` 使用`jdbot_esp32_c6_control` 包中的 C++ 节点。两种实现使用相同的控制参数、话题和串口协议。
+
 ## linksee
 
 ```bash
