@@ -85,13 +85,13 @@ def generate_launch_description():
 
     declare_min_linear_speed = DeclareLaunchArgument(
         'min_linear_speed',
-        default_value='0.05',
+        default_value='0.01',
         description='Minimum absolute linear speed sent to the chassis when cmd_vel linear.x is above the deadzone threshold'
     )
 
     declare_min_angular_speed = DeclareLaunchArgument(
         'min_angular_speed',
-        default_value='0.26',
+        default_value='0.01',
         description='Minimum absolute angular speed sent to the chassis when cmd_vel angular.z is above the deadzone threshold'
     )
 
