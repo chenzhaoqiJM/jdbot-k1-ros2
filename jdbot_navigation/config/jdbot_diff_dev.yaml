@@ -171,7 +171,7 @@ controller_server:
       stateful: True
     FollowPath:
       plugin: "nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController"  # 路径跟随控制器插件类型；调参：通常保持不变
-      desired_linear_vel: 0.3  # 期望线速度，单位：米/秒；调参：运行不稳或环境狭窄时减小
+      desired_linear_vel: 0.5  # 期望线速度，单位：米/秒；调参：运行不稳或环境狭窄时减小
       lookahead_dist: 0.3  # 固定前视距离，单位：米；调参：增大更平滑，减小跟踪更灵敏
       min_lookahead_dist: 0.2  # 速度缩放前视距离的最小值，单位：米；调参：低速转弯不及时可减小
       max_lookahead_dist: 0.6  # 速度缩放前视距离的最大值，单位：米；调参：高速振荡可增大，切弯明显可减小

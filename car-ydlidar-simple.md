@@ -12,7 +12,7 @@ PC Linux 版本：Ubuntu22.04，ROS2 Humble
 ### 启动底盘
 
 ```bash
-ros2 launch jdbot_base_bringup start_control_diffcar_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.169 wheel_diameter:=0.065 min_angular_speed:=0.15 min_linear_speed:=0.01 use_cpp:=true
+ros2 launch jdbot_base_bringup start_control_diffcar_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.169 wheel_diameter:=0.065 min_angular_speed:=0.05 min_linear_speed:=0.01 use_cpp:=true
 ```
 
 ### 启动雷达
@@ -60,7 +60,7 @@ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release --packages-select jdbot_nav
 ### 启动底盘
 
 ```bash
-ros2 launch jdbot_base_bringup start_control_diffcar_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.169 wheel_diameter:=0.065 min_angular_speed:=0.15 min_linear_speed:=0.01 use_cpp:=true
+ros2 launch jdbot_base_bringup start_control_diffcar_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.169 wheel_diameter:=0.065 min_angular_speed:=0.05 min_linear_speed:=0.01 use_cpp:=true
 ```
 
 ### 启动雷达
@@ -94,7 +94,7 @@ ros2 launch visualization display_navigation.launch.py
 ### 启动底盘
 
 ```bash
-ros2 launch jdbot_base_bringup start_control_diffcar_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.169 wheel_diameter:=0.065 min_angular_speed:=0.15 min_linear_speed:=0.01 use_cpp:=true
+ros2 launch jdbot_base_bringup start_control_diffcar_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.169 wheel_diameter:=0.065 min_angular_speed:=0.05 min_linear_speed:=0.01 use_cpp:=true
 ```
 
 ### 启动相机
