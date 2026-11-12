@@ -13,7 +13,7 @@ ros2 launch jdbot_base_bringup start_control_linksee_esp32_c6.launch.py publish_
 注意调整 tf 坐标系
 
 ```bash
-ros2 launch jdbot_base_bringup start_control_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.270 wheel_diameter:=0.065 min_angular_speed:=0.1 min_linear_speed:=0.01 use_cpp:=true
+ros2 launch jdbot_base_bringup start_control_esp32_c6.launch.py publish_tf:=false odom_topic:=odom_base wheel_base:=0.270 wheel_diameter:=0.065 min_angular_speed:=0.01 min_linear_speed:=0.01 use_cpp:=true
 ```
 
 ## TF 坐标比对
