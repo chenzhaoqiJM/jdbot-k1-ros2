@@ -41,6 +41,12 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ros2 launch visualization display_slam.launch.py
 ```
 
+### 保存
+
+```bash
+ros2 run nav2_map_server map_saver_cli -f my_map
+```
+
 ## 导航
 
 ### 复制地图文件
@@ -80,7 +86,7 @@ ros2 launch jdbot_navigation lidar_nav2.launch.py
 同一局域网
 
 ```bash
-ros2 launch visualization display_slam.launch.py
+ros2 launch visualization display_navigation.launch.py
 ```
 
 ## 跟随
