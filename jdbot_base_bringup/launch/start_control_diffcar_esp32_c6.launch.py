@@ -238,17 +238,9 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='tf_pub_base_to_laser',
-        arguments=['-0.035', '0.0', '0.30', '3.14159', '0.0', '0.0',
+        arguments=['0.0', '0.0', '0.20', '3.14159', '0.0', '0.0',
                    'base_link', 'laser_link'],
     )
-
-    tf2_node_rplidar_link = Node(
-            package='tf2_ros',
-            executable='static_transform_publisher',
-            name='tf_pub_base_to_rplidar_link',
-            arguments=['-0.035', '0.0', '0.30', '0.0', '0.0', '0.0',
-                       'base_link', 'rplidar_link'],
-        )
 
     tf2_node_imu = Node(
         package='tf2_ros',
@@ -262,11 +254,11 @@ def generate_launch_description():
         package='tf2_ros',
         executable='static_transform_publisher',
         name='static_tf_pub_rgbd',
-        arguments=['0.035', '0.039', '0.24', '0.0', '0.523', '0.0',
+        arguments=['0.065', '0.02', '0.295', '0.0', '0.0', '0.0',
                    'base_link', 'camera_link'],
     )
     # realsense 左侧红外为camera_link
-    # D455 左侧第一个相机为红外（从后往前看）
+    # D415 左侧第二个相机为红外（从后往前看）
 
     # ================== 底盘里程计节点 ==================
     drive_parameters = [{
@@ -352,7 +344,6 @@ def generate_launch_description():
         tf2_node_laser,
         tf2_node_imu,
         tf2_node_rgbd,
-        tf2_node_rplidar_link,
         drive_node,
         drive_node_cpp,
     ])
