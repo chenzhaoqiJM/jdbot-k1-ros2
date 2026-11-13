@@ -32,5 +32,5 @@ ros2 launch jdbot_base_bringup start_rplidar.launch.py serial_port:=/dev/ttyUSB1
 ```
 
 ```bash
-ros2 launch lidar_2d_odometry lidar_2d_odometry.launch.py
+ros2 launch cartographer_lidar_odometry lidar_odometry.launch.py
 ```

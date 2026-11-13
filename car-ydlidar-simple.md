@@ -72,7 +72,7 @@ ros2 launch jdbot_base_bringup start_ydlidar.launch.py
 ### 启动里程计
 
 ```bash
-ros2 launch lidar_2d_odometry lidar_2d_odometry.launch.py
+ros2 launch cartographer_lidar_odometry lidar_odometry.launch.py
 ```
 
 ### 启动导航
